@@ -1,6 +1,5 @@
 $(document).ready(function () {
 //Se declara un constructor para conseguir los datos del usuario
-
 class Usuario {
     constructor(nombre, apellido, email, monto, pagar) {
             this.nombre = nombre;
@@ -18,9 +17,8 @@ class Usuario {
 }
 //Se crea un array donde se almacenaran los usuarios
  const datosDeUsuario = [];
-
+ 
 //Utilizando jQuery.
-
 $("#formulario").submit(function (e) { 
 
 e.preventDefault();
@@ -37,7 +35,7 @@ datosDeUsuario.push(new Usuario(nombre, apellido, email, monto, pagar));
 
 for (const datos of datosDeUsuario) {
  
-    $("#users").fadeIn(1500).append(`
+    $("#users").append(`
     <div id="datos">
     <div class="card card-body bg-white mt-3">
      <div class="form-group">
@@ -84,7 +82,7 @@ for (const datos of datosDeUsuario) {
         </div>
     </div>
     `)
-    $("#crearBoton").append(`<button id="ocultar" class="btn btn-block btn-success">Ocultar Informacion</button>
+    $("#crearBoton").append(`<button id="ocultar" class="btn btn-block btn-success text-center">Ocultar Informacion</button>
     `)
     ;
 
@@ -92,18 +90,50 @@ for (const datos of datosDeUsuario) {
 const datosJSON = JSON.stringify(datosDeUsuario);
 localStorage.setItem("guardarDatos", datosJSON);
 localStorage.getItem("guardarDatos");
-
 });
 
+//Animaciones de los botones.
 $("#crearBoton").click(() => { 
-    $("#datos").toggle(1000)
+    $("#datos").slideToggle(1000)
     if ($("#ocultar").text() === "Ocultar Informacion") {
         $("#ocultar").text("Mostrar Informacion")
     } else {$("#ocultar").text("Ocultar Informacion")};
 
 });
+//Animacion del TITULO
 $(".letraSize h1").slideUp(2000).slideDown(2000);
-
 $(".letraSize p").slideUp(1000).slideDown(1000);
-})
 
+// jQuery con AJAX. Confirmacion del form.
+$("#formContacto").submit(function (e) {
+  e.preventDefault();
+  console.log("Envío realizado");
+  const datosForm = {nombre: $("#nombreContacto").val(),
+  Apellido: $("#apellidoContacto").val(),
+  Email: $("#emailContacto").val(),
+  Mensaje: $("#mensajeContacto").val()
+};
+
+//Se resetea el Form
+$("#formContacto")[0].reset();
+
+
+  $.ajax({
+    method: "POST",
+    url: "https://jsonplaceholder.typicode.com/posts",
+    data: datosForm,
+    success: function (data) {
+      console.log("informacion recibida", data);
+  
+        $("#modalContacto").append(`<div class="alert alert-success text-center" role="alert">
+        El formulario ha sido enviado con exito!
+      </div>`)
+
+
+    },
+    error: function (error) {
+      console.log("Hubo un error en el envío");
+    },
+  });
+});
+})
