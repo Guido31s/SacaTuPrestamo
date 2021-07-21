@@ -97,7 +97,10 @@ $("#crearBoton").click(() => {
     $("#datos").slideToggle(1000)
     if ($("#ocultar").text() === "Ocultar Informacion") {
         $("#ocultar").text("Mostrar Informacion")
-    } else {$("#ocultar").text("Ocultar Informacion")};
+        $("#ocultar").animate({width: "48.69%"})
+
+    } else {$("#ocultar").text("Ocultar Informacion")
+    $("#ocultar").animate({width: "48.69%"}).animate({width: "100%"})};
 
 });
 //Animacion del TITULO
