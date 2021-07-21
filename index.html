@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>SacaTuPrestamo</title>
+</head>
+
+<body class="bg-light">
+  <div class="container-fluid px-0">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#prestamo">SacaTuPrestamo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class=" d-flex align-items-center fotoBanner">
+    <span></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto text-center letraSize">
+          <h1 class="text-white">Saca Tu Prestamo</h1>
+          <p class="text-white">Rápido, seguro y sencillo!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-5 bg-white text-center fotoNosotros">
+    <h2 id="nosotros" class="text-center pb-2">¿Por qué trabajar con nosotros?</h2>
+    <div class="row infoNos">
+      <div class="col-lg-4 m-auto ">
+        <img src="media/reloj.png" alt="Tiempo">
+        <p class="text-center">Transaccion al instante</p>
+      </div>
+      <div class="col-lg-4 m-auto">
+        <img src="media/proteger.png" alt="Seguridad">
+        <p class="text-center">Todos tus datos estaran protegidos</p>
+      </div>
+      <div class="col-lg-4 m-auto">
+        <img src="media/celular.png" alt="Online">
+        <p class="text-center">Todo desde tu celular</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto calculate-form">
+        <div class="card card-body text-center mt-5">
+          <h1 class="display-5 pb-3 text-secondary letraForm" id="prestamo">Saca Tu Prestamo</h1>
+          <form id="formulario">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su mail" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input type="number" class="form-control" id="monto" placeholder="Ingrese monto" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">A</span>
+              </div>
+              <input type="number" class="form-control" id="pagar" placeholder="Años a pagar" required>
+            </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <input id="boton" type="submit" value="Calcular préstamo" class="btn btn-block btn-success">
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="users" class="container"></div>
+  <div id="crearBoton" class="container"></div>
+  <div id="scrollUp"></div>
+  <footer class="bg-white border-top">
+    <div class="container d-flex justify-content-center">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Acerca de SacaTuPrestamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Soporte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="terminos.html">Terminos y condiciones</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+    <div class="mt-3 text-center">
+      <a href="https://www.twitter.com/"><img src="media/twitter.png"></a>
+      <a href="https://www.instagram.com/"><img src="media/instagram.png"></a>
+      <a href="https://www.facebook.com/"><img src="media/facebook.png"></a>
+    </div>
+    <div class="mt-3 justify-content-center text-center">
+      <span>© 2021 SacaTuPrestamo, Inc.</span>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

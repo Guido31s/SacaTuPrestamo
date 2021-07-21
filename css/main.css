@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap');
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.fotoBanner {
+   background-image: url("../media/banner.jpg");
+   height: 30vh;
+   width: 100%;
+   position: relative;
+}
+.fotoBanner span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(106,117,120);
+background: linear-gradient(180deg, rgba(106,117,120,1) 0%, rgba(3,85,20,1) 84%);
+    background-position: 50%;
+    opacity: .8;
+}
+
+.letraSize h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-style: italic;
+   
+}
+
+.fotoNosotros  img {
+    width: 40%;
+}
+
+.infoNos p {
+    font-weight: 500;
+ font-style: normal;
+}
+
+.letraForm {
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+footer {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    height: 15vh;
+    bottom: 0;
+  }
+  
+footer img {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+  }
+
