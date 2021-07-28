@@ -42,25 +42,28 @@
     <span class="m-5"></span>
     <h1 class="mt-5 text-center text-white">Contactate con nosotros</h1>
   </div>
-  <div id="modalContacto"></div>
+  <div id="alerta" class="alert alert-success text-center" role="alert" style="display: none;">
+    El formulario ha sido enviado con exito!
+  </div>
   <form id="formContacto" class="mb-3">
     <div class="container align-items-center">
       <div class="col-12 px-2">
         <div class="form-group text-white">
           <label for="nombre">Nombre:</label>
-          <input id="nombreContacto" type="text" class="form-control" name="nombre" placeholder="Nombre">
+          <input id="nombreContacto" type="text" class="form-control" name="nombre" placeholder="Nombre" required>
         </div>
         <div class="form-group text-white">
           <label for="apellido">Apellido:</label>
-          <input id="apellidoContacto" type="text" class="form-control" name="apellido" placeholder="Apellido">
+          <input id="apellidoContacto" type="text" class="form-control" name="apellido" placeholder="Apellido" required>
         </div>
         <div class="form-group text-white">
           <label for="email">Email:</label>
-          <input id="emailContacto" type="email" class="form-control" name="email" placeholder="Email">
+          <input id="emailContacto" type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
         <div class="form-group text-white">
           <label for="mensaje">Mensaje:</label>
-          <textarea id="mensajeContacto" class="form-control" name="mensaje" placeholder="Mensaje" rows="10"></textarea>
+          <textarea id="mensajeContacto" class="form-control" name="mensaje" placeholder="Mensaje" rows="10"
+            required></textarea>
         </div>
         <button type="submit" class="btn btn-light mb-2">
           Enviar
