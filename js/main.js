@@ -1,7 +1,17 @@
 $(document).ready(function () {
   //Se declara un constructor para conseguir los datos del usuario
   class Usuario {
-    constructor(nombre, apellido, documento, email, telefono, monto, anios, cuotas, devolver) {
+    constructor(
+      nombre,
+      apellido,
+      documento,
+      email,
+      telefono,
+      monto,
+      anios,
+      cuotas,
+      devolver
+    ) {
       this.nombre = nombre;
       this.apellido = apellido;
       this.documento = documento;
@@ -12,14 +22,12 @@ $(document).ready(function () {
       this.cuotas = parseInt(cuotas);
       this.devolver = devolver;
     }
-
   }
   //Se crea un array donde se almacenaran los usuarios
   const datosDeUsuario = [];
 
   //Utilizando jQuery.
   $("#formulario").submit(function (e) {
-
     e.preventDefault();
 
     let nombre = $("#nombre").val();
@@ -32,7 +40,19 @@ $(document).ready(function () {
     let devolver = $("#monto").val() * 1.25;
     let cuotas = ($("#monto").val() * 1.25) / ($("#anios").val() * 12);
 
-    datosDeUsuario.push(new Usuario(nombre, apellido, documento, email, telefono, monto, anios, cuotas, devolver));
+    datosDeUsuario.push(
+      new Usuario(
+        nombre,
+        apellido,
+        documento,
+        email,
+        telefono,
+        monto,
+        anios,
+        cuotas,
+        devolver
+      )
+    );
 
     $("#inputNombre").val(nombre);
     $("#inputApellido").val(apellido);
@@ -47,18 +67,27 @@ $(document).ready(function () {
     const datosJSON = JSON.stringify(datosDeUsuario);
     localStorage.setItem("guardarDatos", datosJSON);
     localStorage.getItem("guardarDatos");
-setTimeout($("#datos").fadeIn(1500), 2000);
-   
-    $("#ocultar").css("display", "block");
 
+    setTimeout($("#datos").fadeIn(1500), 2000);
+
+    $("#cancelar").css("display", "block");
+    $("#confirmar").css("display", "block");
   });
 
   //Animaciones de los botones.
-  $("#ocultar").click(() => { 
-    $("#datos").fadeOut(500)
-    $("#ocultar").hide();
+  $("#confirmar").click(() => {
+    $("#datos").fadeOut(500);
+    $("#confirmar").hide();
     $("#formulario")[0].reset();
-});
+    $("#cancelar").hide();
+  });
+
+  $("#cancelar").click(() => {
+    $("#confirmar").hide();
+    $("#cancelar").hide();
+    $("#datos").hide();
+    $("#formulario")[0].reset();
+  });
   //Animacion del TITULO
   $(".letraSize h1").slideUp(2000).slideDown(2000);
   $(".letraSize p").slideUp(1000).slideDown(1000);
@@ -71,7 +100,7 @@ setTimeout($("#datos").fadeIn(1500), 2000);
       nombre: $("#nombreContacto").val(),
       Apellido: $("#apellidoContacto").val(),
       Email: $("#emailContacto").val(),
-      Mensaje: $("#mensajeContacto").val()
+      Mensaje: $("#mensajeContacto").val(),
     };
 
     //Se resetea el Form
@@ -90,4 +119,4 @@ setTimeout($("#datos").fadeIn(1500), 2000);
       },
     });
   });
-})
+});

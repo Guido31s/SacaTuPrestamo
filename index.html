@@ -38,7 +38,7 @@
       </div>
     </nav>
   </div>
-  <div class=" d-flex align-items-center fotoBanner">
+  <div id="inicio" class="d-flex align-items-center fotoBanner">
     <span></span>
     <div class="container">
       <div class="row">
@@ -183,8 +183,8 @@
 
       </div>
     </div>
-    <button id="ocultar" class="btn btn-block btn-success text-center rounded-pil" data-toggle="modal"
-      data-target="#alertaModal" style="display: none;">Confirmar</button>
+    <button id="confirmar" class="btn btn-block btn-success text-center rounded-pil" data-toggle="modal" data-target="#alertaModal" style="display: none;">Confirmar</button>
+    <button id="cancelar" class="btn btn-block btn-danger text-center rounded-pil"style="display: none;">Cancelar</button>
   </div>
   <div class="modal fade" id="alertaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -209,13 +209,14 @@
     <div class="container d-flex justify-content-center">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Acerca de SacaTuPrestamo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Soporte</a>
+          <a class="nav-link active" href="#inicio">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="terminos.html">Terminos y condiciones</a>
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://wa.link/q0hh5q" target="_blank">Soporte</a>
         </li>
         </li>
       </ul>
