@@ -23,6 +23,7 @@ $(document).ready(function () {
       this.devolver = devolver;
     }
   }
+
   //Se crea un array donde se almacenaran los usuarios
   const datosDeUsuario = [];
 
@@ -74,7 +75,7 @@ $(document).ready(function () {
     $("#confirmar").css("display", "block");
   });
 
-  //Animaciones de los botones.
+  //Animaciones y funciones de los botones.
   $("#confirmar").click(() => {
     $("#datos").fadeOut(500);
     $("#confirmar").hide();
@@ -88,6 +89,7 @@ $(document).ready(function () {
     $("#datos").hide();
     $("#formulario")[0].reset();
   });
+
   //Animacion del TITULO
   $(".letraSize h1").slideUp(2000).slideDown(2000);
   $(".letraSize p").slideUp(1000).slideDown(1000);
